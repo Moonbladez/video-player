@@ -25,12 +25,13 @@ const updatePlayIcon = () => {
 
 //update progress & timestamp
 const updateProgress = () => {
-    return true;
+    //set progress bar moving in percentages
+    progress.value = (video.currentTime / video.duration) * 100
 }
 
 //set video time to progress
 const setVideoProgress = () => {
-    return true;
+    video.currentTime = ((parseInt(progress.value) * video.duration) / 100)
 }
 
 const stopVideo = () => {
